@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Su kien chuot</title>
+</head>
+<body onload = init() >
+<form>
+<img id = MyImg src="https://james.codegym.vn/pluginfile.php/10804/mod_assign/intro/1.png" height="300" width ='300px'/>
+<p> Click to move the picture</p>
+<input type= "button" onclick='moveLeft()' value="Left">
+<input type = "button" onclick = 'moveRight()' value = 'Right'>
+</form>
+<script>
+    var myImg = document.getElementById('MyImg');
+    function init() {
+        var moveImg=myImg;
+        moveImg.style.position = 'relative';
+        moveImg.style.left = '0px'
+    }
+    function moveRight() {
+        var moveImg=myImg;
+        moveImg.style.left = parseInt(moveImg.style.left) + 20 + 'px';
+    }
+
+    function moveLeft() {
+        var moveImg=myImg;
+        moveImg.style.left = parseInt(moveImg.style.left) - 20 + 'px';
+    }
+
+    window.onload=init();
+</script>
+</body>
+</html>
